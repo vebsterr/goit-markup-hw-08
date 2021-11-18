@@ -349,12 +349,15 @@ body {
     margin: 0;
 }
 
+.footer-list .footer-list-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 .footer-contacts {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
-    margin-bottom: 9px;
     display: inline-block;
     letter-spacing: 0.03em;
 }
@@ -447,14 +450,19 @@ body {
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
+}
+
+.results-image {
+    display: block;
+}
+
+.results-info {
     background: #FFFFFF;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     box-sizing: border-box;
 }
-
-
 
 .results-item-title {
     font-weight: 700;
