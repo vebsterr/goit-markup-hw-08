@@ -16,6 +16,32 @@
     --fourth-text-color: #757575;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: var(--first-text-color);
@@ -24,12 +50,15 @@ body {
 /* ___________универсальные_____________ */
 
 .list {
-    list-style: none ;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 
 .link {
     text-decoration: none;
+    color: inherit;
 }
 
 .container {
@@ -41,6 +70,7 @@ body {
 
 .section {
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 
@@ -176,6 +206,9 @@ body {
 
 /* ___________деятельность_____________ */
 
+.section-benefits {
+    padding-top: 94px;
+}
 
 .benefits-list {
     display: flex;
@@ -371,9 +404,7 @@ body {
 
 /* ___________PORTFOLIO_____________ */
 
-.projects {
-    padding-top: 94px;
-}
+
 
 .projects-container {
     display: flex;
@@ -443,7 +474,6 @@ body {
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
-    padding: 0 0 94px 0;
 }
 
 .results-item {
@@ -452,9 +482,7 @@ body {
     margin-bottom: 30px;
 }
 
-.results-image {
-    display: block;
-}
+
 
 .results-info {
     background: #FFFFFF;
