@@ -294,8 +294,8 @@ body {
     line-height: 1.66;
     text-align: center;
     letter-spacing: 0.03em;
-    padding: 0 0 50px 0;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 50px 0;
 }
 
 .team-list {
@@ -321,6 +321,10 @@ body {
                 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.team-item-card {
+    padding: 30px 0 30px 0;
+}
+
 
 .team-item-title {
     font-weight: 500;
@@ -329,8 +333,8 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--third-text-color);
-    margin: 0;
-    padding: 30px 0 10px 0;
+    margin: 0 0 10px 0;
+    padding: 0;
 }
 
 .team-item-text {
@@ -340,18 +344,19 @@ body {
     text-align: center;
     color: var(--fourth-text-color);
     margin: 0;
-    padding-bottom: 30px;
+    padding: 0;
 }
 
 /* ___________footer_____________ */
 
 .footer {
     background-color: var(--background-first-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-container {
-    padding-top: 60px;
-    padding-bottom: 60px;
+
 }
 
 .footer-logo {
@@ -404,16 +409,17 @@ body {
 
 
 .projects-container {
+    flex-direction: column;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    align-items: center;
 }
 
 .project-list-nav {
     display: flex;
     align-items: center;
     padding-left: 0;
-    margin: 0;
+    margin: 0 0 50px 0;
 }
 
 .project-list-item {
@@ -487,6 +493,7 @@ body {
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     box-sizing: border-box;
+    padding: 20px 24px;
 }
 
 .results-item-title {
@@ -496,8 +503,9 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--first-text-color);
-    padding: 20px 24px 4px 24px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0 0 4px 0;
+    text-align: start;
 }
 
 .results-item-text {
@@ -506,8 +514,9 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
-    padding: 0 24px 20px 24px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    text-align: start;
 }
 
 .address {
