@@ -466,8 +466,9 @@ margin: 50px 0 0 0;
 }
 
 .footer-container {
-
+    display: flex;
 }
+
 
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -484,7 +485,6 @@ margin: 50px 0 0 0;
 .footer-address {
     font-size: 14px;
     line-height: 1.71;
-
     letter-spacing: 0.03em;
     color: var(--logo-text-footer-color);
 }
@@ -513,7 +513,35 @@ margin: 50px 0 0 0;
     color: var(--accent-color);
 }
 
+.footer-social-box {
+    margin-left: 70px;
+    box-sizing: inherit;
+}
 
+.footer-social-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-icons-list {
+    display: flex;
+}
+
+.footer-icons-item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+
+.footer-icons-item:last-child {
+    margin-right: 0;
+}
 /* ___________PORTFOLIO_____________ */
 
 
