@@ -123,7 +123,7 @@ body {
     line-height: 1.33;
     letter-spacing: 0.02em;
     color: var(--nav-color);
-    padding-right: 50px;
+    margin-right: 50px;
 }
 .header-link:hover {
     color: var(--accent-color);
@@ -178,6 +178,8 @@ body {
     max-width: 1600px;
     background-position: center;
     background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-section {
