@@ -112,9 +112,26 @@ body {
     color: var(--accent-color);
 }
 
+.header-list .link.current::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    background-color: #2196F3;
+    display: block;
+    height: 4px;
+
+}
+
 .header-list {
     display: flex;
     padding: 0%;
+}
+
+.header-list-item {
+    position: relative;
+    margin-right: 50px;
 }
 
 .header-link {
@@ -123,7 +140,7 @@ body {
     line-height: 1.33;
     letter-spacing: 0.02em;
     color: var(--nav-color);
-    margin-right: 50px;
+
 }
 .header-link:hover {
     color: var(--accent-color);
