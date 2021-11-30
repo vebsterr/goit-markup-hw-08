@@ -597,7 +597,7 @@ margin: 50px 0 0 0;
     fill: var(--main-icon-color);
     background-color: rgba(255, 255, 255, 0.1);
     transition-property: background-color, fill;
-    transition-duration: 250ms 250ms;
+    transition-duration: 250ms;
     transition-timing-function: var(--speed-for-animation);
 
 }
@@ -654,6 +654,9 @@ margin: 50px 0 0 0;
     background: #F5F4FA;
     border-radius: 4px;
     padding: 0;
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms ;
+    transition-timing-function: var(--speed-for-animation);
 }
 .project-button:hover,
 .project-button:focus {
