@@ -508,8 +508,6 @@ margin: 50px 0 0 0;
 }
 
 
-
-
 /* ___________footer_____________ */
 
 .footer {
@@ -559,13 +557,15 @@ margin: 50px 0 0 0;
     line-height: 1.71;
     display: inline-block;
     letter-spacing: 0.03em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--speed-for-animation);
 }
-.footer-contacts:hover {
-    color: var(--accent-color);
-}
+.footer-contacts:hover,
 .footer-contacts:focus {
     color: var(--accent-color);
 }
+
 
 .footer-social-box {
     margin-left: 70px;
@@ -596,6 +596,9 @@ margin: 50px 0 0 0;
     justify-content: center;
     fill: var(--main-icon-color);
     background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color, fill;
+    transition-duration: 250ms 250ms;
+    transition-timing-function: var(--speed-for-animation);
 
 }
 
