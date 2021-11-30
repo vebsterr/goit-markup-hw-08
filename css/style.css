@@ -80,7 +80,8 @@ body {
 /* ___________хедер_____________ */
 
 .header {
-
+    padding-top: 24px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -132,7 +133,6 @@ body {
 .header-list-item {
     position: relative;
     margin-right: 50px;
-    padding: 32px 0;
 }
 
 .header-link {
@@ -496,7 +496,7 @@ margin: 50px 0 0 0;
     align-items: center;
     justify-content: center;
     fill: var(--main-icon-color);
-    transition-property: border-color fill;
+    transition-property: border-color, fill;
     transition-duration: 250ms;
     transition-timing-function: var(--speed-for-animation);
 }
