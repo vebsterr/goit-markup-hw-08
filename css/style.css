@@ -171,14 +171,13 @@ body {
     color: var(--header-contact-color);
     margin-left: 30px;
     fill: var(--header-contact-color);
-    transition: color 250ms;
+    transition: color 2500ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-item:hover,
 .header-contact-item:focus {
     color: var(--accent-color);
-    fill: var(--accent-color);
 }
 
 .header-contact-icon {
@@ -422,8 +421,8 @@ body {
 }
 
 .social-icons-list {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .social-icons-item {
@@ -440,15 +439,16 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    color:var(--main-icon-color);
     fill: var(--main-icon-color);
-    transition: background-color 250ms, fill 250ms;
+    transition: background-color 250ms, color 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-link:hover,
 .social-icons-link:focus {
     background-color: var(--accent-color);
-    fill: var(--white);
+    color: var(--white);
 }
 
 
@@ -492,15 +492,16 @@ margin: 50px 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--main-icon-color);
     fill: var(--main-icon-color);
-    transition-property: border-color, fill;
+    transition-property: border-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover,
 .clients-list-link:focus {
-    fill: var(--accent-color);
+    color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
@@ -592,8 +593,9 @@ margin: 50px 0 0 0;
     align-items: center;
     justify-content: center;
     fill: var(--main-icon-color);
+    color: var(--main-icon-color);
     background-color: rgba(255, 255, 255, 0.1);
-    transition-property: background-color, fill;
+    transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -602,7 +604,7 @@ margin: 50px 0 0 0;
 .footer-icons-link:hover,
 .footer-icons-link:focus {
     background-color: var(--accent-color);
-    fill: var(--white);
+    color: var(--white);
 }
 
 .footer-icons-item {
@@ -706,14 +708,10 @@ margin: 50px 0 0 0;
                 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-
-
 .results-thumb {
     position: relative;
     overflow: hidden;
 }
-
-
 
 .results-backdrop {
     height: 100%;
