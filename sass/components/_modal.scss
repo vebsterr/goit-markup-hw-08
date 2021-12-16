@@ -1,0 +1,191 @@
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__exit-button {
+        width: 30px;
+        height: 30px;
+        background-color: var(--white);
+        color: var(--black);
+
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 7px;
+        right: 8px;
+    }
+
+    &__button:focus &__exit-icon {
+        fill: var(--accent-color);
+    }
+
+    &__form {
+        margin: 40px 40px 20px 40px;
+        color: var(--space-gray);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--black-gray);
+
+        margin-bottom: 12px;
+    }
+
+    &__container-input {
+        margin-bottom: 10px;
+    }
+
+    &__lable {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--space-gray);
+        margin-bottom: 4px;
+        display: inline-block;
+    }
+
+    &__box-input {
+        position: relative;
+    }
+
+    &__input {
+        width: 448px;
+        height: 40px;
+        border-radius: 4px;
+        padding-left: 42px;
+        outline: none;
+        color: var(--space-gray);
+        background-color: transparent;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        transition: border-color 250ms linear;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.78, 0.73);
+    }
+
+    &__input:focus {
+        border-color: var(--accent-color);
+    }
+
+    &__icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: var(--black-gray);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.78, 0.73);
+    }
+
+    &__input:focus + &__icon {
+        fill: var(--accent-color);
+    }
+
+    &__textarea-container {
+        margin-bottom: 20px;
+    }
+
+    &__textarea {
+        resize: none;
+        padding: 12px 16px;
+        width: 100%;
+        height: 120px;
+        color: inherit;
+        outline: none;
+        background-color: transparent;
+        border-radius: 4px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        transition: border-color 250ms linear;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.78, 0.73);
+    }
+
+    &__textarea:focus {
+        border-color: var(--accent-color);
+    }
+
+    &__textarea::placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.agreement {
+    display: flex;
+    justify-content: center;
+
+    &__lable {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    &__checkbox {
+        margin-right: 7px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        position: absolute;
+    }
+
+    &__icon {
+        border: solid 1px #000;
+        border-radius: 2px;
+
+        fill: transparent;
+        transform: scale(1);
+        width: 16px;
+        height: 15px;
+        transition: fill 300ms cubic-bezier(0.4, 0, 0.78, 0.73),
+            transform 300ms cubic-bezier(0.4, 0, 0.78, 0.73),
+            border 300ms cubic-bezier(0.4, 0, 0.78, 0.73),
+            background-color 300ms cubic-bezier(0.4, 0, 0.78, 0.73);
+        margin-right: 5px;
+    }
+
+    &__checkbox:checked + &__icon {
+        fill: var(--white);
+        background-color: var(--accent-color);
+        transform: scale(1.5);
+        border: 1px solid #2196f3;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        margin-right: 5px;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--accent-color);
+    }
+}

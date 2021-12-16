@@ -6,6 +6,10 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     display: block;
+
+    &__accent {
+        color: var(--accent-color);
+    }
 }
 
 .header__logo {
@@ -13,6 +17,7 @@
     margin-right: 93px;
 }
 
-.logo__accent {
-    color: var(--accent-color);
+.footer__logo {
+    color: var(--white);
+    margin-bottom: 20px;
 }

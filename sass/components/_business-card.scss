@@ -1,0 +1,36 @@
+.business-card {
+    &__address {
+        font-style: normal;
+        margin-bottom: 9px;
+    }
+
+    &__maps {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--white);
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__contacts {
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+        margin-bottom: 9px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        display: inline-block;
+        letter-spacing: 0.03em;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__contacts:hover,
+    &__contacts:focus {
+        color: var(--accent-color);
+    }
+}

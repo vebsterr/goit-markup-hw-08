@@ -1,0 +1,34 @@
+.footer {
+    background-color: var(--dark-grey);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &-container {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.follow-us {
+    margin-left: 70px;
+    box-sizing: inherit;
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--white);
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+.social__link--white {
+    fill: var(--white);
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
