@@ -2,28 +2,27 @@
     background-color: var(--second-white);
 
     &__title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.66;
+        @include font(700, 28px, 1.17, 0.03em);
         text-align: center;
-        letter-spacing: 0.03em;
-        padding: 0;
-        margin: 0 0 50px 0;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 1200px) {
+            @include font(700, 36px, 1.66, 0.03em);
+        }
     }
 
     &__list {
+        @extend %list;
         display: flex;
         flex-wrap: wrap;
-        margin-right: -30px;
-        margin-bottom: -30px;
-        padding-left: 0;
-        margin-top: 0;
+    }
+
+    &__container {
     }
 }
 .worker-card {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin: 30px 15px;
+
     border-bottom: 3px solid --space-gray;
     border-left: 1px solid --space-gray;
     border-right: 1px solid --space-gray;
@@ -32,25 +31,28 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
 
+    @media screen and (min-width: 768px) {
+        width: calc(100% / 2 - 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc(100% / 4 - 30px);
+    }
+
     &__info {
-        padding: 30px 0 30px 0;
+        padding: 30px 0;
     }
 
     &__title {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.18;
+        @include font(500, 16px, 1.18, 0.03em);
         text-align: center;
-        letter-spacing: 0.03em;
         color: var(--black-gray);
         margin: 0 0 10px 0;
         padding: 0;
     }
 
     &__text {
-        font-size: 16px;
-        line-height: 1.18;
-        letter-spacing: 0.03em;
+        @include font(400, 16px, 1.18, 0.03em);
         text-align: center;
         color: var(--space-gray);
         margin: 0 0 16px 0;
@@ -60,6 +62,7 @@
 
 .social {
     display: flex;
+    @extend %list;
 
     &--center {
         justify-content: center;
