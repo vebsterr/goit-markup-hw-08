@@ -211,6 +211,14 @@ body {
   text-transform: uppercase;
   color: var(--white);
 }
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
+}
 
 .main-button {
   min-width: 200px;
