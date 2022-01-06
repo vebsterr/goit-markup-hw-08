@@ -625,6 +625,11 @@ body {
         flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 768px) {
+  .benefits__list {
+    margin-bottom: 60px;
+  }
+}
 .benefits__item {
   margin: 0 15px 30px 15px;
 }
