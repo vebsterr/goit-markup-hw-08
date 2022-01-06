@@ -20,51 +20,122 @@
         <link rel="stylesheet" href="./css/main.min.css" />
     </head>
     <body>
-        <!-- <header class="header">
+        <header class="header">
             <div class="container header__container">
                 <nav class="header__nav">
-                    <a class="logo header__logo link" href="index.html"
+                    <a class="logo header__logo" href="index.html"
                         ><span class="logo__accent">Web</span>Studio</a
                     >
-                    <ul class="header__list list">
+                    <ul class="header__list">
                         <li class="header__item">
                             <a
                                 href="index.html"
-                                class="header__link current link"
+                                class="header__link current"
                                 >Студия</a
                             >
                         </li>
                         <li class="header__item">
-                            <a href="portfolio.html" class="header__link link"
+                            <a href="portfolio.html" class="header__link"
                                 >Портфолио</a
                             >
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__link link">Контакты</a>
+                            <a href="" class="header__link">Контакты</a>
                         </li>
                     </ul>
+                    <button class="menu-button" type="button" aria-label="Переключатель мобильного меню" >
+                        <svg class="menu-button__icon" width="40" height="40">
+                            <use class="menu-button__start" href="./Img/icons.svg#menu"></use>
+                        </svg>
+                    </button>
+                    <div class="mob-menu" id="mob-menu">
+                        <div class="mob-menu__container">
+                            <div class="mob-menu__first-box">
+                                <button type="button" class="mob-menu__exit-button">
+                                    <svg class="mob-menu__exit-icon" width="40" height="40">
+                                        <use href="./Img/icons.svg#menu-close"></use>
+                                    </svg>
+                                </button>
+                                <ul class="mob-menu__nav">
+                                    <li class="mob-menu__nav-item">
+                                        <a
+                                            class="mob-menu__nav-link"
+                                            href="./index.html"
+                                            >Студия</a
+                                        >
+                                    </li>
+                                    <li class="mob-menu__nav-item">
+                                        <a
+                                            class="mob-menu__nav-link"
+                                            href="./portfolio.html"
+                                            >Портфолио</a
+                                        >
+                                    </li>
+                                    <li class="mob-menu__nav-item">
+                                        <a class="mob-menu__nav-link" href=""
+                                            >Контакты</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mob-menu__second-box">
+                                <a class="mob-menu__tel" href="tel:+380961111111"
+                                    >+38 099 111 11 11</a
+                                >
+                                <a
+                                    class="mob-menu__mail"
+                                    href="mailto:info@devstudio.com"
+                                    >info@devstudio.com</a
+                                >
+                                <ul class="mob-menu__social">
+                                    <li class="mob-menu__social-item mob-menu__social-item--stick">
+                                        <a class="mob-menu__social-link" href=""
+                                            >Instagram</a
+                                        >
+                                    </li>
+                                    <li class="mob-menu__social-item mob-menu__social-item--stick">
+                                        <a class="mob-menu__social-link" href=""
+                                            >Twitter</a
+                                        >
+                                    </li>
+                                    <li class="mob-menu__social-item mob-menu__social-item--stick">
+                                        <a class="mob-menu__social-link" href=""
+                                            >Facebook</a
+                                        >
+                                    </li class="mob-menu__social-item">
+                                    <li>
+                                        <a class="mob-menu__social-link" href=""
+                                            >LinkedIn</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
                 <div class="contacts">
-                    <ul class="contacts__list list">
+                    <ul class="contacts__list">
                         <li class="contacts__item">
-                            <a
-                                class="contacts__link link"
-                                href="mailto:info@devstudio.com"
-                            >
-                                <svg
-                                    class="contacts__icon"
-                                    width="16"
-                                    height="12"
-                                    fill="currentColor"
+                            <div class="heelloo">
+                                <a
+                                    class="contacts__link"
+                                    href="mailto:info@devstudio.com"
                                 >
-                                    <use href="./Img/icons.svg#mail"></use>
-                                </svg>
-                                info@devstudio.com
-                            </a>
+                                    <svg
+                                        class="contacts__icon"
+                                        width="16"
+                                        height="12"
+                                        fill="currentColor"
+                                    >
+                                        <use href="./Img/icons.svg#mail"></use>
+                                    </svg>
+                                    info@devstudio.com
+                                </a>
+                            </div>
                         </li>
                         <li class="contacts__item">
                             <a
-                                class="contacts__link link"
+                                class="contacts__link"
                                 href="tel:+380961111111"
                             >
                                 <svg
@@ -81,7 +152,7 @@
                     </ul>
                 </div>
             </div>
-        </header> -->
+        </header>
         <main>
             <section class="hero">
                 <div class="hero__section">
@@ -94,7 +165,7 @@
                     </button>
                 </div>
             </section>
-            <section class="section benefits">
+            <section class="benefits">
                 <div class="container benefits__container">
                     <h2 hidden class="benefits__title">Преимущества</h2>
                     <ul class="benefits__list">
@@ -157,7 +228,11 @@
                     <ul class="activity__list">
                         <li class="activity__item">
                             <img
-                                src="./Img/Work/box1.jpg"
+                                srcset="
+                                    ./Img/activity/activity-1-desk-1x.jpg 1x,
+                                    ./Img/activity/activity-1-desk-2x.jpg 2x
+                                "
+                                src="./Img/activity/activity-1-desk-1x.jpg"
                                 alt="Печать"
                                 width="100%"
                             />
@@ -167,7 +242,11 @@
                         </li>
                         <li class="activity__item">
                             <img
-                                src="./Img/Work/box2.jpg"
+                                srcset="
+                                    ./Img/activity/activity-2-desk-1x.jpg 1x,
+                                    ./Img/activity/activity-2-desk-2x.jpg 2x
+                                "
+                                src="./Img/activity/activity-2-desk-1x.jpg"
                                 alt="Аналитика"
                                 width="100%"
                             />
@@ -175,7 +254,11 @@
                         </li>
                         <li class="activity__item">
                             <img
-                                src="./Img/Work/box3.jpg"
+                                srcset="
+                                    ./Img/activity/activity-3-desk-1x.jpg 1x,
+                                    ./Img/activity/activity-3-desk-2x.jpg 2x
+                                "
+                                src="./Img/activity/activity-3-desk-1x.jpg"
                                 alt="Цвета"
                                 width="100%"
                             />
@@ -189,12 +272,35 @@
                     <h2 class="team__title">Наша команда</h2>
                     <ul class="team__list list">
                         <li class="worker-card">
-                            <img
-                                class="worker-card__photo"
-                                src="./Img/Team/img.jpg"
-                                alt="Игорь Демьяненко"
-                                width="100%"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./Img/team/desk/team-1-desk-1x.jpg 1x,
+                                        ./Img/team/desk/team-1-desk-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/tab/team-1-tab-1x.jpg 1x,
+                                        ./Img/team/tab/team-1-tab-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/mob/team-1-mob-1x.jpg 1x,
+                                        ./Img/team/mob/team-1-mob-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    class="worker-card__photo"
+                                    src="./Img/team/desk/team-1-desk-1x.jpg"
+                                    alt="Игорь Демьяненко"
+                                    width="100%"
+                                />
+                            </picture>
                             <div class="worker-card__info">
                                 <h3 class="worker-card__title">
                                     Игорь Демьяненко
@@ -279,11 +385,35 @@
                             </div>
                         </li>
                         <li class="worker-card">
-                            <img
-                                src="./Img/Team/img-1.jpg"
-                                alt="Ольга Репина"
-                                width="100%"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./Img/team/desk/team-2-desk-1x.jpg 1x,
+                                        ./Img/team/desk/team-2-desk-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/tab/team-2-tab-1x.jpg 1x,
+                                        ./Img/team/tab/team-2-tab-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/mob/team-2-mob-1x.jpg 1x,
+                                        ./Img/team/mob/team-2-mob-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    class="worker-card__photo"
+                                    src="./Img/team/desk/team-2-desk-1x.jpg"
+                                    alt="Ольга Репина"
+                                    width="100%"
+                                />
+                            </picture>
                             <div class="worker-card__info">
                                 <h3 class="worker-card__title">Ольга Репина</h3>
                                 <p class="worker-card__text">
@@ -366,11 +496,35 @@
                             </div>
                         </li>
                         <li class="worker-card">
-                            <img
-                                src="./Img/Team/img-2.jpg"
-                                alt="Николай Тарасов"
-                                width="100%"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./Img/team/desk/team-3-desk-1x.jpg 1x,
+                                        ./Img/team/desk/team-3-desk-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/tab/team-3-tab-1x.jpg 1x,
+                                        ./Img/team/tab/team-3-tab-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/mob/team-3-mob-1x.jpg 1x,
+                                        ./Img/team/mob/team-3-mob-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    class="worker-card__photo"
+                                    src="./Img/team/desk/team-3-desk-1x.jpg"
+                                    alt="Николай Тарасов"
+                                    width="100%"
+                                />
+                            </picture>
                             <div class="worker-card__info">
                                 <h3 class="worker-card__title">
                                     Николай Тарасов
@@ -453,11 +607,35 @@
                             </div>
                         </li>
                         <li class="worker-card">
-                            <img
-                                src="./Img/Team/img-3.jpg"
-                                alt="Михаил Ермаков"
-                                width="100%"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./Img/team/desk/team-4-desk-1x.jpg 1x,
+                                        ./Img/team/desk/team-4-desk-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/tab/team-4-tab-1x.jpg 1x,
+                                        ./Img/team/tab/team-4-tab-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./Img/team/mob/team-4-mob-1x.jpg 1x,
+                                        ./Img/team/mob/team-4-mob-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    class="worker-card__photo"
+                                    src="./Img/team/desk/team-4-desk-1x.jpg"
+                                    alt="Михаил Ермаков"
+                                    width="100%"
+                                />
+                            </picture>
                             <div class="worker-card__info">
                                 <h3 class="worker-card__title">
                                     Михаил Ермаков
@@ -622,30 +800,30 @@
                 </div>
             </section>
         </main>
-        <!-- <footer class="footer">
-            <div class="container footer-container">
+        <footer class="footer">
+            <div class="container footer__main-container">
                 <div class="business-card">
-                    <a class="logo footer__logo link" href="index.html"
+                    <a class="logo footer__logo" href="index.html"
                         ><span class="logo__accent">Web</span>Studio</a
                     >
                     <address class="business-card__address">
                         <a
-                            class="business-card__maps link"
+                            class="business-card__maps"
                             href="https://goo.gl/maps/NozThFSos2tHS6zk9"
-                            >г. Киев, пр-т ЛесиУкраинки, 26</a
+                            >г. Киев, пр-т Леси Украинки, 26</a
                         >
                     </address>
                     <ul class="business-card__list">
                         <li class="list business-card__item">
                             <a
-                                class="business-card__contacts link"
-                                href="mailto:info@example.com"
-                                >info@example.com</a
+                                class="business-card__contacts"
+                                href="mailto:info@devstudio.com"
+                                >info@devstudio.com</a
                             >
                         </li>
                         <li class="list business-card__item">
                             <a
-                                class="business-card__contacts link"
+                                class="business-card__contacts"
                                 href="tel:+380991111111"
                                 >+38 099 111 11 11</a
                             >
@@ -714,8 +892,8 @@
                     </button>
                 </form>
             </div>
-        </footer> -->
-        <!-- <div class="backdrop is-hidden" data-modal>
+        </footer>
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="modal__exit-button" data-modal-close>
                     <svg class="modal__exit-icon" width="11" height="11">
@@ -809,9 +987,11 @@
                             </svg>
                             <p class="agreement__text">
                                 Соглашаюсь с рассылкой и принимаю
+                                <a class="agreement__link" href=""
+                                    >Условия договора</a
+                                >
                             </p>
                         </label>
-                        <a class="agreement__link" href="">Условия договора</a>
                     </div>
                     <div class="modal__send-button">
                         <button class="main-button" type="submit">
@@ -820,7 +1000,8 @@
                     </div>
                 </form>
             </div>
-        </div> -->
+        </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

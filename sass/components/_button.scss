@@ -34,3 +34,33 @@
     padding-top: 30px;
     padding-bottom: 40px;
 }
+
+.menu-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+
+    &:hover &__icon {
+        fill: var(--accent-color);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &__close {
+        display: none;
+    }
+
+    &.is-open &__close {
+        display: block;
+    }
+
+    &.is-open &__open {
+        display: none;
+    }
+}

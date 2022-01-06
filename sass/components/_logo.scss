@@ -1,10 +1,13 @@
 .logo {
+    @include font(700, 24px, 1.66, 0.03em);
+
+    @extend %link;
+
+    @media screen and (min-width: 1200px) {
+        @include font(700, 26px, 1.19, 0.03em);
+    }
+
     font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     display: block;
 
     &__accent {
@@ -14,10 +17,12 @@
 
 .header__logo {
     color: var(--black);
-    margin-right: 93px;
+
+    margin-left: 15px;
 }
 
 .footer__logo {
     color: var(--white);
     margin-bottom: 20px;
+    text-align: center;
 }

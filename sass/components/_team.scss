@@ -16,12 +16,9 @@
         display: flex;
         flex-wrap: wrap;
     }
-
-    &__container {
-    }
 }
 .worker-card {
-    margin: 30px 15px;
+    margin: 15px;
 
     border-bottom: 3px solid --space-gray;
     border-left: 1px solid --space-gray;
@@ -63,6 +60,7 @@
 .social {
     display: flex;
     @extend %list;
+    margin-right: -10px;
 
     &--center {
         justify-content: center;

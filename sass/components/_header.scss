@@ -1,23 +1,47 @@
 .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    // padding-top: 24px;
+    // padding-bottom: 25px;
     border-bottom: 1px solid #ececec;
+    position: sticky;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    background-color: var(--white);
+    z-index: 4;
+
+    @media screen and (min-width: 768px) {
+        height: 80px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        position: static;
+    }
 
     &__container {
         display: flex;
-        align-items: baseline;
+        align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            align-items: baseline;
+        }
     }
 
     &__nav {
         display: flex;
-        align-items: baseline;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 767px) {
+            width: 480px;
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: baseline;
+        }
     }
 
-    &__list .link.current {
-        color: var(--accent-color);
-    }
-
-    &__item .link.current::after {
+    &__item &__link.current::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -26,11 +50,29 @@
         background-color: var(--accent-color);
         height: 4px;
         border-radius: 2px;
+
+        @media screen and (min-width: 1200px) {
+            bottom: -27px;
+        }
     }
 
     &__list {
-        display: flex;
+        @extend %list;
         padding: 0%;
+        display: flex;
+        margin-left: 88px;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 93px;
+        }
+    }
+
+    &__list .link.current {
+        color: var(--accent-color);
     }
 
     &__item {
@@ -39,6 +81,8 @@
     }
 
     &__link {
+        @extend %link;
+
         font-weight: 500;
         font-size: 14px;
         line-height: 1.33;
@@ -50,6 +94,117 @@
     }
     &__link:hover,
     &__link:focus {
+        color: var(--accent-color);
+    }
+}
+
+.mob-menu {
+    position: fixed;
+    top: -100vh;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 20;
+
+    transition: top 200ms linear;
+
+    &.is-open {
+        top: 0;
+    }
+
+    &__exit-button {
+        border: none;
+        background-color: transparent;
+        margin-left: auto;
+        padding: 0;
+
+        &:hover {
+            fill: var(--accent-color);
+        }
+    }
+
+    &__container {
+        padding-top: 10px;
+        padding-bottom: 48px;
+        margin-left: 40px;
+        margin-right: 15px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__first-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__nav {
+        @extend %list;
+    }
+
+    &__nav-item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__second-box {
+    }
+
+    &__nav-link {
+        @extend %link;
+        @include font(500, 40px, 1.17, 0.02em);
+
+        color: var(--black-gray);
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+    &__tel {
+        @include font(500, 34px, 1.17, 0.02em);
+        @extend %link;
+        color: var(--accent-color);
+        display: inline-block;
+        margin-bottom: 32px;
+    }
+
+    &__mail {
+        font-style: inherit;
+        @include font(500, 24px, 1.66, 0.02em);
+        @extend %link;
+        color: var(--space-gray);
+        display: inline-block;
+        margin-bottom: 64px;
+    }
+
+    &__social {
+        @extend %list;
+        display: flex;
+    }
+
+    &__social-item {
+        margin-right: 20px;
+        position: relative;
+
+        &--stick::after {
+            position: absolute;
+            right: -10px;
+            top: 0;
+            display: block;
+            content: " ";
+            width: 1px;
+            height: 20px;
+            background-color: rgba(33, 33, 33, 0.2);
+        }
+    }
+
+    &__social-link {
+        @extend %link;
         color: var(--accent-color);
     }
 }
