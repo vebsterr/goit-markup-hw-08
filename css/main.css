@@ -1132,7 +1132,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .subscribe-form__container {
